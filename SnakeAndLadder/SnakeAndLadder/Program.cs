@@ -38,10 +38,11 @@ namespace SnakeAndLadder
         static void Main(string[] args)
         {
             int Player1 = 0;
-          
+            int dieRollCount = 0;
             while (Player1 < 100)
             {
                 Console.WriteLine("--------------");
+                dieRollCount++;
                 Program obj = new Program();
                 int DieValue = obj.RollDie();
                 Console.WriteLine("Roll Die value is : " + DieValue);
@@ -53,7 +54,9 @@ namespace SnakeAndLadder
                     Player1 = PrePostion;
                 }
                 Console.WriteLine("Player 1 Position is : " + Player1);
-            } 
+            }
+            Console.WriteLine("The Total number of time die was rolled to win :" + dieRollCount);
+
         }
 
     }   
