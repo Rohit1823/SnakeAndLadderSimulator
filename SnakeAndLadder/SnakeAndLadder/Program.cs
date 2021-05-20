@@ -38,11 +38,17 @@ namespace SnakeAndLadder
         static void Main(string[] args)
         {
             int Player1 = 0;
-            Console.WriteLine("Player Position is " + Player1);
-            Program obj = new Program();
-            int DieValue = obj.RollDie();
-            Console.WriteLine("Roll Die value is : " + DieValue);
-            Console.WriteLine("Player Status And Value is : " + obj.Check_Option(DieValue, Player1));
+          
+            while (Player1 <= 100)
+            {
+                Console.WriteLine("Player Position is " + Player1);
+                Program obj = new Program();
+                int DieValue = obj.RollDie();
+                Console.WriteLine("Roll Die value is : " + DieValue);
+                Player1 = obj.Check_Option(DieValue, Player1);
+                Console.WriteLine("Player Status And Value is : " + Player1);
+
+            } 
         }
 
     }   
